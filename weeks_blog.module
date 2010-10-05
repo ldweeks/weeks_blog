@@ -1,0 +1,3 @@
+<?php
+
+include_once('weeks_blog.features.inc');
