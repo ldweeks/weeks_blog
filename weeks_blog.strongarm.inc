@@ -9,7 +9,7 @@ function weeks_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_blog_post';
-  $strongarm->value = 0;
+  $strongarm->value = '2';
 
   $export['comment_anonymous_blog_post'] = $strongarm;
   $strongarm = new stdClass;
@@ -87,6 +87,13 @@ function weeks_blog_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_page_pattern';
+  $strongarm->value = '[title-raw]';
+
+  $export['pathauto_node_page_pattern'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'theme_blogbuzz_settings';
   $strongarm->value = array(
     'blogbuzz_style' => 'chocolate',
@@ -115,39 +122,5 @@ function weeks_blog_strongarm() {
   );
 
   $export['theme_blogbuzz_settings'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'theme_default';
-  $strongarm->value = 'blogbuzz';
-
-  $export['theme_default'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'theme_settings';
-  $strongarm->value = array(
-    'toggle_logo' => 0,
-    'toggle_name' => 1,
-    'toggle_slogan' => 0,
-    'toggle_mission' => 0,
-    'toggle_node_user_picture' => 0,
-    'toggle_comment_user_picture' => 0,
-    'toggle_search' => 0,
-    'toggle_favicon' => 0,
-    'toggle_primary_links' => 1,
-    'toggle_secondary_links' => 1,
-    'toggle_node_info_blog_post' => 1,
-    'toggle_node_info_page' => 0,
-    'toggle_node_info_story' => 0,
-    'default_logo' => 0,
-    'logo_path' => '',
-    'logo_upload' => '',
-    'default_favicon' => 0,
-    'favicon_path' => '',
-    'favicon_upload' => '',
-  );
-
-  $export['theme_settings'] = $strongarm;
   return $export;
 }
