@@ -17,6 +17,16 @@ function weeks_blog_views_default_views() {
   $view->api_version = 2;
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('sorts', array(
+    'created' => array(
+      'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'relationship' => 'none',
+    ),
+  ));
   $handler->override_option('filters', array(
     'status_extra' => array(
       'operator' => '=',
@@ -56,6 +66,7 @@ function weeks_blog_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('items_per_page', 20);
+  $handler->override_option('use_pager', '1');
   $handler->override_option('row_plugin', 'node');
   $handler->override_option('row_options', array(
     'relationship' => 'none',

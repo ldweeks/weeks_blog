@@ -16,6 +16,7 @@ function weeks_blog_context_default_contexts() {
       'values' => array(
         'blog' => 'blog',
         'blog/*' => 'blog/*',
+        '<front>' => '<front>',
       ),
     ),
   );
