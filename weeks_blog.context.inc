@@ -23,23 +23,23 @@ function weeks_blog_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-recent_blog_comments-block' => array(
+          'module' => 'views',
+          'delta' => 'recent_blog_comments-block',
+          'region' => 'left',
+          'weight' => 0,
+        ),
         'views-blog_archive-block' => array(
           'module' => 'views',
           'delta' => 'blog_archive-block',
           'region' => 'left',
-          'weight' => 0,
+          'weight' => 1,
         ),
         'views-Blog_Tags-block_1' => array(
           'module' => 'views',
           'delta' => 'Blog_Tags-block_1',
           'region' => 'left',
-          'weight' => 1,
-        ),
-        'views-recent_blog_comments-block' => array(
-          'module' => 'views',
-          'delta' => 'recent_blog_comments-block',
-          'region' => 'right',
-          'weight' => 0,
+          'weight' => 2,
         ),
       ),
     ),
